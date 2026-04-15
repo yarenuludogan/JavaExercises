@@ -37,13 +37,13 @@ public class MineSweeper {
             }
 
             if (map[row][col] == -1) {
-                System.out.println("Boom! Mayına bastınız! Oyun bitti ☠️");
+                System.out.println("Mayına bastınız! Oyun bitti ");
                 game = false;
             } else {
                 check(row, col);
                 success++;
                 if (success == (rowNumber * colNumber) - (rowNumber * colNumber / 4)) {
-                    System.out.println("Tebrikler! Tüm güvenli bölgeleri açtınız! 🎉");
+                    System.out.println("Tebrikler! Tüm güvenli bölgeleri açtınız!");
                     break;
                 }
             }
@@ -82,7 +82,6 @@ public class MineSweeper {
     }
 
     public void printMap() {
-        System.out.println("\nMayın Haritası (Test amaçlı):");
         for (int[] row : map) {
             for (int value : row) {
                 if (value == -1)
